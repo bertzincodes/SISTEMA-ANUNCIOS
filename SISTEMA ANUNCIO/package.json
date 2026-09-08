@@ -1,0 +1,29 @@
+{
+  "name": "sistema-propagandas-vertical",
+  "version": "1.0.0",
+  "description": "Player local de fotos e vídeos para sinalização digital vertical.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^37.0.0",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "br.adelcoco.propagandas",
+    "productName": "Sistema de Propagandas",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!dist/**"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    }
+  }
+}
